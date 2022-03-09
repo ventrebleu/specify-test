@@ -1,7 +1,5 @@
 {
   "repository": "@faire/dssc-test",
-  "base": "staging",
-  "head": "design/specify/brand",
   "rules": [
     {
       "name": "Design Tokens / Colors",
@@ -15,9 +13,6 @@
           "options": {
             "formatTokens": {
               "color": "hsl"
-            },
-            "formatConfig": {
-              "selector": ":root[data-theme='dark']"
             }
           }
         }
