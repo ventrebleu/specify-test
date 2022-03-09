@@ -1,65 +1,24 @@
 {
   "repository": "@faire/dssc-test",
+  "head": "specify",
   "rules": [
     {
       "name": "Design Tokens / Colors",
-      "path": "assets/styles/variables/colors.scss",
-      "filter": {
+      "path": "assets/styles/variables/colors.css",
+      "filter":{
         "types": ["color"]
       },
       "parsers": [
         {
-          "name": "to-css-custom-properties",
+          "name": "sort-by",
           "options": {
-            "formatTokens": {
-              "color": "hsl"
-            }
+            "keys": ["name"]
           }
-        }
-      ]
-    },
-    {
-      "name": "Design Tokens",
-      "path": "assets/styles/variables/general.scss",
-      "filter": {
-        "types": ["border", "depth", "duration", "gradient", "measurement", "opacity", "shadow"]
-      },
-      "parsers": [
+        },
         {
           "name": "to-css-custom-properties"
         }
       ]
-    },
-    {
-      "name": "Assets",
-      "path": "assets/",
-      "filter": {
-        "types": ["vector"]
-      },
-      "parsers": [
-        {
-          "name": "svgo",
-          "options": {
-            "svgo": {
-              "plugins": [
-                {
-                  "removeDimensions": true
-                },
-                {
-                  "removeAttrs": {
-                    "attrs": "*:(fill|stroke)"
-                  }
-                },
-                {
-                  "addAttributesToSVGElement": {
-                    "attributes": ["width=\"1em\"", "height=\"1em\""]
-                  }
-                }
-              ]
-            }
-          }
-        }
-      ],
     }
   ]
 }
