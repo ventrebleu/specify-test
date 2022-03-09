@@ -1,5 +1,6 @@
 {
   "repository": "@faire/dssc-test",
+  "head": "specify",
   "rules": [
     {
       "name": "Design Tokens / Colors",
