@@ -1,24 +1,55 @@
 {
-  "repository": "@faire/dssc-test",
-  "head": "specify",
-  "rules": [
-    {
-      "name": "Design Tokens / Colors",
-      "path": "assets/styles/variables/colors.css",
-      "filter":{
-        "types": ["color"]
-      },
-      "parsers": [
-        {
-          "name": "sort-by",
-          "options": {
-            "keys": ["name"]
-          }
+    "repository": "@faire/dssc-test",
+    "head": "specify",
+    "rules": [
+      {
+        "name": "Design Tokens / Colors",
+        "path": "assets/styles/variables/colors.css",
+        "filter":{
+          "types": ["color"]
         },
-        {
-          "name": "to-css-custom-properties"
-        }
-      ]
-    }
-  ]
+        "parsers": [
+          {
+            "name": "sort-by",
+            "options": {
+              "keys": ["name"]
+            }
+          },
+          {
+            "name": "to-css-custom-properties"
+          }
+        ]
+      },
+      {
+        "name": "Assets",
+        "path": "assets/",
+        "filter": {
+          "types": ["vector"]
+        },
+        "parsers": [
+          {
+            "name": "svgo",
+            "options": {
+              "svgo": {
+                "plugins": [
+                  {
+                    "removeDimensions": true
+                  },
+                  {
+                    "removeAttrs": {
+                      "attrs": "*:(fill|stroke)"
+                    }
+                  },
+                  {
+                    "addAttributesToSVGElement": {
+                      "attributes": ["width=\"1em\"", "height=\"1em\""]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
 }
