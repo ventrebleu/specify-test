@@ -1,6 +1,5 @@
 {
   "repository": "@ventrebleu/specify-test",
-  "head": "specify",
   "rules": [
     {
       "name": "Design Tokens / Colors",
