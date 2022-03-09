@@ -1,5 +1,5 @@
 {
-  "repository": "@ventrebleu/specify-test",
+  "repository": "@faire/dssc-test",
   "rules": [
     {
       "name": "Design Tokens / Colors",
