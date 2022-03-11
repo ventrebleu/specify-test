@@ -1,4 +1,7 @@
 :root {
   /* BORDER */
   --first-asset: 4px solid rgba(45, 0, 247, 1);
+
+  /* MEASUREMENT */
+  --first-asset: 239px;
 }
