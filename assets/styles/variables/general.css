@@ -1,1 +1,4 @@
-[]
+:root {
+  /* BORDER */
+  --first-asset: 2px solid rgba(242, 0, 137, 1);
+}
